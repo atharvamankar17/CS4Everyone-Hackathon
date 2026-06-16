@@ -1,9 +1,5 @@
 # Gesture Mouse Controller
 
-[![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.13-green.svg)](https://opencv.org/)
-[![Mediapipe](https://img.shields.io/badge/Mediapipe-0.10.14-orange.svg)](https://google.github.io/mediapipe/)
-
 A powerful, interactive computer vision application that transforms a standard webcam into a fully functioning, hands-free mouse. 
 
 ---
