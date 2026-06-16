@@ -20,7 +20,7 @@ A powerful, interactive computer vision application that transforms a standard w
 ---
 
 ## Introduction
-The **Gesture Mouse Controller** replaces the need for a physical mouse. By analyzing a live video feed, the application tracks hand landmarks and classifies gestures in real-time. These physical hand gestures are seamlessly mapped to system-level commands, allowing users to move the cursor, click, scroll, drag files, and manage system brightness or volume entirely touch-free.
+The **Gesture Mouse Controller** replaces the need for a physical mouse. By analyzing a live video feed, the application tracks hand landmarks and classifies gestures in real-time. These physical hand gestures are seamlessly mapped to system-level commands, allowing users to move the cursor, click, scroll, drag files, and manage system brightness or volume—entirely touch-free.
 
 ---
 
@@ -65,23 +65,40 @@ graph TD
 ## Mathematical Foundation
 
 ### 1. Coordinate Projection
-To translate the index finger's position from the camera lens to the computer screen, a linear transformation is applied. Given the camera resolution ($w_{cam} \times h_{cam}$) and screen resolution ($w_{screen} \times h_{screen}$):
+To translate the index finger's position from the camera lens to the computer screen, a linear transformation is applied. Given the camera resolution (\\(w_{cam} \times h_{cam}\\)) and screen resolution (\\(w_{screen} \times h_{screen}\\)):
 
-$$ x_{screen} = \left( \frac{x_{cam}}{w_{cam}} \right) \times w_{screen} $$
-$$ y_{screen} = \left( \frac{y_{cam}}{h_{cam}} \right) \times h_{screen} $$
+$$
+x_{screen} = \left( \frac{x_{cam}}{w_{cam}} \right) \times w_{screen}
+$$
+
+$$
+y_{screen} = \left( \frac{y_{cam}}{h_{cam}} \right) \times h_{screen}
+$$
 
 ### 2. Kalman Filter Smoothing
 Raw webcam coordinates are noisy. A Kalman Filter predicts the actual state by minimizing the mean of the squared error. 
 
 **Prediction Equations:**
-$$ \hat{x}_{k|k-1} = F_k \hat{x}_{k-1|k-1} + B_k u_k $$
-$$ P_{k|k-1} = F_k P_{k-1|k-1} F_k^T + Q_k $$
+
+$$
+ \hat{x}_{k|k-1} = F_k \hat{x}_{k-1|k-1} + B_k u_k
+$$
+
+$$
+P_{k|k-1} = F_k P_{k-1|k-1} F_k^T + Q_k
+$$
 
 **Update Equations:**
-$$ K_k = P_{k|k-1} H_k^T (H_k P_{k|k-1} H_k^T + R_k)^{-1} $$
-$$ \hat{x}_{k|k} = \hat{x}_{k|k-1} + K_k(z_k - H_k \hat{x}_{k|k-1}) $$
 
-Where $F$ is the state-transition model, $H$ is the observation model, $Q$ is process noise, and $R$ is observation noise. This successfully stops cursor jitter.
+$$
+K_k = P_{k|k-1} H_k^T (H_k P_{k|k-1} H_k^T + R_k)^{-1}
+$$
+
+$$
+ \hat{x}_{k|k} = \hat{x}_{k|k-1} + K_k(z_k - H_k \hat{x}_{k|k-1})
+$$
+
+Where \\(F\\) is the state-transition model, \\(H\\) is the observation model, \\(Q\\) is process noise, and \\(R\\) is observation noise. This successfully stops cursor jitter.
 
 ---
 
@@ -108,7 +125,7 @@ The system supports a variety of pre-defined hand poses mapped to OS commands.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/atharvamankar17/CS4Everyone-Hackathon.git
+   git clone <repo-url>
    cd <project-folder>
    ```
 2. **Set up a Virtual Environment:**
