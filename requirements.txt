@@ -1,0 +1,11 @@
+opencv-python
+mediapipe==0.10.14
+numpy
+PyAutoGUI
+Pillow
+pycaw
+comtypes
+pywin32
+filterpy
+psutil
+screen-brightness-control
