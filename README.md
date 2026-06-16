@@ -20,7 +20,7 @@ A powerful, interactive computer vision application that transforms a standard w
 ---
 
 ## Introduction
-The **Gesture Mouse Controller** replaces the need for a physical mouse. By analyzing a live video feed, the application tracks hand landmarks and classifies gestures in real-time. These physical hand gestures are seamlessly mapped to system-level commands, allowing users to move the cursor, click, scroll, drag files, and manage system brightness or volume—entirely touch-free.
+The **Gesture Mouse Controller** replaces the need for a physical mouse. By analyzing a live video feed, the application tracks hand landmarks and classifies gestures in real-time. These physical hand gestures are seamlessly mapped to system-level commands, allowing users to move the cursor, click, scroll, drag files, and manage system brightness or volume entirely touch-free.
 
 ---
 
@@ -125,7 +125,7 @@ The system supports a variety of pre-defined hand poses mapped to OS commands.
 
 1. **Clone the repository:**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/atharvamankar17/CS4Everyone-Hackathon.git
    cd <project-folder>
    ```
 2. **Set up a Virtual Environment:**
