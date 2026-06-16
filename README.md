@@ -108,7 +108,7 @@ The system supports a variety of pre-defined hand poses mapped to OS commands.
 
 1. **Clone the repository:**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/atharvamankar17/CS4Everyone-Hackathon.git
    cd <project-folder>
    ```
 2. **Set up a Virtual Environment:**
